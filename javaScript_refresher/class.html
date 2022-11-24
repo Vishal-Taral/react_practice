@@ -8,59 +8,30 @@
   </head>
   <body>
     <script>
-      // class person {
-      //   constructor() {
-      //     return (this.name = "vishal");
-      //   }
+      class person {
+        constructor() {
+          this.name = 'vishal';
+        }
 
-      //   getName = () => {
-      //     console.log(this.name);
-      //   };
-      // }
+        getName = () => {
+          console.log(this.name);
+        };
+      }
 
-      // class human extends person {
-      //   constructor() {
-      //     super();
-      //     return (this.gender = "male");
-      //   }
+      class human extends person {
+        constructor() {
+          super();
+          this.gender = 'male';
+        }
 
-      //   getGender = () => {
-      //     console.log(this.gender);
-      //   };
-      // }
+        getGender = () => {
+          console.log(this.gender);
+        };
+      }
 
-      // let humans = new human();
-      // humans.getGender();
-      // humans.getName();
-
-      // function add(){
-      //   console.log('arg', Array.from(arguments));
-      //   var addition = 0;
-      //   for (const key in arguments) {
-      //     if (Object.hasOwnProperty.call(object, key)) {
-      //       const element = object[key];
-            
-      //     }
-      //   }
-      // }
-      // add(20, 30, 40, 50, 30);
-
-      let str = "vishal";
-      let a = str.split("");
-      console.log(a);
-
-      let obj = {
-        name : "vishal",
-        city : "aurangabad",
-
-      };
-
-      let c = {
-        education : "MSc",
-        __proto__: obj
-      };
-
-      console.log(c);
+      let humans = new human();
+      humans.getGender();
+      humans.getName();
     </script>
   </body>
 </html>
