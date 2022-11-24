@@ -1,19 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        let array = [1,2,3,4,5,6];
-        let array1 = [...array , 6];
-        [num1, num2, num3] = array1;
-        console.log(num1,num2,num3);  // array destructuring
-        console.log(array1); 
-        
+      "use strict";
+      let array = [1, 2, 3, 4, 5, 6];
+      let array1 = [...array, 6];
+      let [num1, num2, num3] = array1;
+      console.log(num1, num2, num3); // array destructuring
+      console.log(array1);
+      let arraymap = array.map((nums) => {
+        return nums * 2; // only this will be return only one return statement is allowed
+        return nums * 3; // if write return twice error will not shows
+      });
+      console.log(arraymap);
+
+      let obj = {
+        name: "vishal",
+        age: 23,
+        city: "aurangabad",
+      };
+
+      let obj2 = {
+        ...obj,
+        education: "MSc",
+        special: "Computer Science",
+      };
+
+      console.log(obj2);
+      
+      // In Modern javascript we can write like this
+
+      class Person {
+        name = "Vishal";
+      }
+
+      const person = new Person();
+      console.log(person.name);
     </script>
-</body>
+  </body>
 </html>
