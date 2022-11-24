@@ -7,6 +7,7 @@ function App() {
     <div className="App">
       <h1>Hello.. World..!  I am Vishal</h1>
       <ExpenseItem></ExpenseItem>
+      <ExpenseItem></ExpenseItem>
     </div>
   );
 }
