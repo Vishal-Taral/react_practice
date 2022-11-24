@@ -1,6 +1,8 @@
+import './ExpenseItem.css'
+
 function ExpenseItem() {
     return (
-    <div>
+    <div className='mainDiv'>
         <h5>First Component of in react App i.e Expense Component</h5>
         <p>ExpenseItem Component Created</p>
     </div>
