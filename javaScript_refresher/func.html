@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // syntax of function
+        //         1   Normal function
+
+        function printMyName(name) {
+            console.log(name);
+        }
+        printMyName('vishal');
+
+        //        2 Arrow Function
+
+        let printEmpName = (name) => {
+            console.log(name);
+        }
+        printEmpName('Hrishikesh');
+
+        // if we have not an argument for arraow function we cant ommit the paranthesis
+        // we must write atleast empty parenthesis like this
+
+        let printCompanyName = () => {
+            console.log('polygloft');
+        }
+        printCompanyName();
+        
+        // if our code ends in single line then we can ommit the curly brackes
+        // It's a shorter way to write a function
+        const addition = (number) => number*4;
+        console.log(addition(3));
+    </script>
+</body>
+</html>
