@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>refrashing array function</title>
+  </head>
+  <body>
+    <script>
+        // map() mehtod
+      const numArray = [1, 2, 3, 45, 4];
+
+      const tripple = numArray.map((num) => {
+        return num * 3;
+      });
+
+      console.log(numArray);
+      console.log(tripple);
+
+      // find 
+      let array = [1,2,4,76,54,67];
+      const found = array.find(elem => elem > 20);
+      console.log(found);  // returns only first one element that satisfies the condition
+
+      // findIndex
+      let array2 = [5,6,54,44,2,20];
+      let isGreaterThan = (elem) => elem > 20;
+      console.log(array2.findIndex(isGreaterThan));// returns only one index of element
+
+      // filter
+      let words = ['vishal','rohan','shreenivas','mangesh'];
+      let result = words.filter(word => word.length > 6);
+      console.log(result);  //returns all element that satisfies the condition 
+
+      //reduce 
+      let array3 = [1,2,3,4,5];
+      let firstValue = 0;
+      let sum = array3.reduce((fValue, lValue) => fValue + lValue,firstValue
+      );
+
+      console.log(sum);
+
+      // concat() method
+
+      const char = ['a','b'];
+      const char1 =['aa','bb'];
+      const char2 = char.concat(char1);
+      console.log(char2);
+
+      //slice 
+
+      const com = ['ab', 'ac' , 'ad', 'ae', 'af'];
+      console.log(com.slice(2));
+      console.log(com.slice(2, 4));
+      console.log(com.slice(-2));
+
+      //splice
+
+      const com1 = ['ab', 'ac' , 'ad', 'ae', 'af'];
+      console.log(com1.splice(2));
+      console.log(com1.splice(2, 4));
+      console.log(com1.splice(-2));
+
+
+    </script>
+  </body>
+</html>
