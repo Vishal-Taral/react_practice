@@ -11,7 +11,7 @@ function App() {
     {
       id: 2,
       name: "rohan",
-      joiningDate: new Date("05 October 2011 14:48 UTC"),
+      joiningDate: new Date(2022, 1, 26),
     },
     {
       id: 3,

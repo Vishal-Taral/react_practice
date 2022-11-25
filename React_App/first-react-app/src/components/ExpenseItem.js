@@ -15,7 +15,7 @@ function ExpenseItem (props) {
         <h4>{gift}</h4>
         <h1>{props.empName}</h1>
         <h1>{props.empId}</h1>
-        <p>{props.empJoining?.toISOString()}</p>
+        <p>{props.empJoining?.toISOString()}</p>    
         <p>ExpenseItem Component Created</p>
     </div>
 );

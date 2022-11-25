@@ -1,0 +1,12 @@
+table{
+    border: 1px solid red;
+    border-collapse: collapse;
+    text-align: center;
+    height: 6rem;
+}
+th{
+    border: 1px solid red;
+}
+td{
+    border: 1px solid red;
+}
