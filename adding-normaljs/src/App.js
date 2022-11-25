@@ -24,9 +24,7 @@ function App() {
   ]
   return (
     <div className="App">
-    <Addnormal id = {empData[0].empId} name = {empData[0].empName } salary = {empData[0].empSalary } joiningDate = {empData[0].empJoining.toISOString}/>
-    
-
+    <Addnormal id = {empData[0].empId} name = {empData[0].empName } salary = {empData[0].empSalary } joiningDate = {empData[0].empJoining.toDateString()}/>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import "./addnormal.css";
 
 let addnormal = (data) => {
-    
 
   return (
     
@@ -27,7 +26,7 @@ let addnormal = (data) => {
               <h4>{data.salary}</h4>
             </td>
             <td>
-              <h4>{data.empJoining}</h4>
+              <h4>{data.joiningDate}</h4>
             </td>
           </tr>
         </tbody>
