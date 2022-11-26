@@ -1,0 +1,13 @@
+.school{
+    color: blueviolet;
+    height: 90vh;
+    background-color: aqua;
+    padding: 3rem;
+}
+table, th, td{
+    border: 1px solid black ;
+    border-radius: 3px;
+    text-align: center;
+    width: 400px;
+    height: 30px;
+}
