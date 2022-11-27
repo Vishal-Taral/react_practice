@@ -1,0 +1,20 @@
+.expense {
+    /* color: yellow; */
+    margin: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: pink;
+    padding: 1rem;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.amountBtn {
+    width: 5rem;
+    height: 2.5rem;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 15px;
+}
