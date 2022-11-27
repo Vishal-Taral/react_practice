@@ -1,10 +1,11 @@
+import Card from './card';
 import './version.css'
 
 let version = () => {
     return (
-        <div className="vesionDiv">
+        <Card className="vesionDiv">
             <h3>the first version</h3>
-        </div>
+        </Card>
     );
 }
 
