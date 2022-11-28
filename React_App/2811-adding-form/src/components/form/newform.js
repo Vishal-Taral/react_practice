@@ -6,8 +6,6 @@ let Newform = () => {
   const [enteredProduct, setEnterdProduct] = useState("");
   const [enteredPrice, setEnterdPrice] = useState("");
   const [enteredDate, setEnterdDate] = useState("");
- 
-
 
   const ChangeProductHandler = (containt) => {
     setEnterdProduct(containt.target.value);
@@ -24,9 +22,20 @@ let Newform = () => {
     console.log(containt.target.value);
   };
 
+  const submitHandler = (events) => {
+    events.preventDefault();
+
+    const productData = {
+      title: enteredProduct,
+      Price: enteredPrice,
+      expiryDate: new Date(enteredDate),
+    };
+    console.log(productData);
+  };
+
   return (
     <div>
-      <Card className="outerdiv">
+      <Card className="outerdiv" >
         <h1>Section to add new product</h1>
         <div className="form-new-expense">
           <form>
@@ -65,7 +74,9 @@ let Newform = () => {
             ></input>
           </form>
         </div>
-        <button className="expenseBtn btn" >Add Expense</button>
+        <button className="expenseBtn btn" type="submit" onClick={submitHandler}>
+          Add Expense
+        </button>
       </Card>
     </div>
   );
