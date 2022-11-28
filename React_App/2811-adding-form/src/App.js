@@ -11,20 +11,20 @@ function App() {
       expdate: new Date(2022, 9, 24),
     },
     {
-      product: "freeze",
+      product: "Freeze",
       price: 15000,
       expdate: new Date(2022, 9, 2),
     },
     {
-      product: "TV",
-      price: 12000,
+      product: "Laptop",
+      price: 50000,
       expdate: new Date(2024, 2, 24),
     },
   ];
 
   return (
     <div className="App">
-      <Newform/>
+      <Newform />
       <Card>
         <Expense
           Product={expenses[0].product}

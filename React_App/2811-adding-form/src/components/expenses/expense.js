@@ -1,4 +1,3 @@
-
 import "./expense.css";
 
 const expense = (props) => {

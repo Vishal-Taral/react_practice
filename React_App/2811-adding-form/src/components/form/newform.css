@@ -1,6 +1,6 @@
 .form-new-expense{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1rem;
 }
 .outerdiv{
@@ -14,6 +14,7 @@
     border-radius: 3px;
     padding: 0.6rem;
     cursor: pointer;
+    margin-top: 2rem;
 }
 .expenseBtn:hover{
     background-color: rgb(61, 78, 84);
