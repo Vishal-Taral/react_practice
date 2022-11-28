@@ -3,7 +3,7 @@ import './expenseItem.css'
 
 let expenseItem = (data) => {
     function click () {
-        console.log('clicked')
+        console.log('clicked');
     };
     return (
         <Card className="ExpenseItem">
