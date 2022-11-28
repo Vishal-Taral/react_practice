@@ -1,0 +1,24 @@
+.form-new-expense{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.outerdiv{
+    border: 1px solid black;
+    background-color: pink;
+    border-radius: 20px;
+    padding-bottom: 1rem;
+}
+.expenseBtn{
+    background-color:rgb(94, 132, 148);
+    border-radius: 3px;
+    padding: 0.6rem;
+    cursor: pointer;
+}
+.expenseBtn:hover{
+    background-color: rgb(61, 78, 84);
+}
+.input{
+    border-radius: 6px;
+    height: 60%;
+}
