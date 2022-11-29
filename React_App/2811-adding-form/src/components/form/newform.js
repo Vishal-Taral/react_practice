@@ -31,11 +31,14 @@ let Newform = () => {
       expiryDate: new Date(enteredDate),
     };
     console.log(productData);
+    // setEnterdProduct('');
+    // setEnterdPrice('');
+    // setEnterdDate('');
   };
 
   return (
     <div>
-      <Card className="outerdiv" >
+      <Card className="outerdiv">
         <h1>Section to add new product</h1>
         <div className="form-new-expense">
           <form>
@@ -46,6 +49,7 @@ let Newform = () => {
             <input
               className="input"
               type="text"
+              value={setEnterdProduct}
               onChange={ChangeProductHandler}
             ></input>
           </form>
@@ -58,6 +62,7 @@ let Newform = () => {
             <input
               className="input"
               type="number"
+              value={setEnterdPrice}
               onChange={ChangePriceHandler}
             ></input>
           </form>
@@ -70,11 +75,16 @@ let Newform = () => {
             <input
               className="input"
               type="date"
+              value={setEnterdDate}
               onChange={ChangeDateHandler}
             ></input>
           </form>
         </div>
-        <button className="expenseBtn btn" type="submit" onClick={submitHandler}>
+        <button
+          className="expenseBtn btn"
+          type="submit"
+          onClick={submitHandler}
+        >
           Add Expense
         </button>
       </Card>

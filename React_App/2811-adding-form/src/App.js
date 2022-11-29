@@ -1,5 +1,6 @@
 import Expense from "./components/expenses/expense";
-import Newform from "./components/form/newform";
+// import Newform from "./components/form/newform";
+import NewExpense from "./components/expenses/newExpense";
 import Card from "./components/UI/card";
 import "./App.css";
 
@@ -24,7 +25,9 @@ function App() {
 
   return (
     <div className="App">
-      <Newform />
+      {/* <Newform /> */}
+      <NewExpense/>
+      
       <Card>
         <Expense
           Product={expenses[0].product}
