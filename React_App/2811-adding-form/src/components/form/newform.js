@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Card from "../UI/card";
 import "./newform.css";
 
@@ -6,8 +6,7 @@ let Newform = (props) => {
   const [enteredProduct, setEnterdProduct] = useState("xx");
   const [enteredPrice, setEnterdPrice] = useState(5555);
   const [array, setArray] = useState([]);
-  console.log("outside-function-formComponent-array", array);
-
+  
   const ChangeProductHandler = (containt) => {
     setEnterdProduct(containt.target.value);
   };
@@ -19,17 +18,29 @@ let Newform = (props) => {
   const submitHandler = (events) => {
     events.preventDefault();
 
-    setArray([
-      ...array,
-      {
-        title: enteredProduct,
-        Price: enteredPrice
-      },
-    ]);
+    // setArray([
+    //   ...array,
+    //   {
+    //     title: enteredProduct,
+    //     Price: enteredPrice
+    //   },
+    // ]);
 
-    console.log("inside-function-formComponent-array", array);
-    props.onAddExpense(array);
+    array.push(  
+         {
+          title: enteredProduct,
+          Price: enteredPrice
+        }
+      )
+
+    changeData()
   };
+
+    const changeData = () => {
+    console.log('newForm===>',array)
+    props.dataHandler(array);
+  }
+
 
   return (
     <div>

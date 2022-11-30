@@ -1,7 +1,10 @@
-import "./expense.css";
 
-const expense = (props) => {
-  console.log("listComponent-array", props.data);
+import "./expense.css";
+import { useState } from "react";
+
+const Expense = (props) => {
+  // setAlldata(props.data)
+  console.log("Expense ==>", props.data);
   return (
     <div>
       {props.data.length>=1?props.data.map((rowdata) => {
@@ -15,4 +18,4 @@ const expense = (props) => {
   );
 };
 
-export default expense;
+export default Expense;
