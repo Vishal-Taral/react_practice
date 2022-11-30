@@ -2,38 +2,33 @@ import { useState } from "react";
 import Card from "../UI/card";
 import "./newform.css";
 
-let Newform = () => {
-  const [enteredProduct, setEnterdProduct] = useState("");
-  const [enteredPrice, setEnterdPrice] = useState("");
-  const [enteredDate, setEnterdDate] = useState("");
+let Newform = (props) => {
+  const [enteredProduct, setEnterdProduct] = useState("xx");
+  const [enteredPrice, setEnterdPrice] = useState(5555);
+  const [array, setArray] = useState([]);
+  console.log("outside-function-formComponent-array", array);
 
   const ChangeProductHandler = (containt) => {
     setEnterdProduct(containt.target.value);
-    console.log(containt.target.value);
   };
 
   const ChangePriceHandler = (containt) => {
     setEnterdPrice(containt.target.value);
-    console.log(containt.target.value);
-  };
-
-  const ChangeDateHandler = (containt) => {
-    setEnterdDate(containt.target.value);
-    console.log(containt.target.value);
   };
 
   const submitHandler = (events) => {
     events.preventDefault();
 
-    const productData = {
-      title: enteredProduct,
-      Price: enteredPrice,
-      expiryDate: new Date(enteredDate),
-    };
-    console.log(productData);
-    // setEnterdProduct('');
-    // setEnterdPrice('');
-    // setEnterdDate('');
+    setArray([
+      ...array,
+      {
+        title: enteredProduct,
+        Price: enteredPrice
+      },
+    ]);
+
+    console.log("inside-function-formComponent-array", array);
+    props.onAddExpense(array);
   };
 
   return (
@@ -42,41 +37,28 @@ let Newform = () => {
         <h1>Section to add new product</h1>
         <div className="form-new-expense">
           <form>
-            <lable>
+            <label>
               <strong>Product</strong>
-            </lable>
+            </label>
             <br></br>
             <input
               className="input"
               type="text"
-              value={setEnterdProduct}
+              value={enteredProduct}
               onChange={ChangeProductHandler}
             ></input>
           </form>
 
           <form>
-            <lable>
+            <label>
               <strong>Amount</strong>
-            </lable>
+            </label>
             <br></br>
             <input
               className="input"
               type="number"
-              value={setEnterdPrice}
+              value={enteredPrice}
               onChange={ChangePriceHandler}
-            ></input>
-          </form>
-
-          <form>
-            <lable>
-              <strong>Date</strong>
-            </lable>
-            <br></br>
-            <input
-              className="input"
-              type="date"
-              value={setEnterdDate}
-              onChange={ChangeDateHandler}
             ></input>
           </form>
         </div>

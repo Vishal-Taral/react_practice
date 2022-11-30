@@ -14,5 +14,11 @@
     background-color: tomato;
     border-radius: 5px;
     margin-bottom: 0.5rem;
-
+}
+.col{
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
 }
