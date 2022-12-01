@@ -1,16 +1,22 @@
-import {useState} from 'react'
 import "./expense.css";
+import { useState } from 'react';
 
-const expense = (props) => {
-    const [product , setprod] = useState(props.Prod)
+const Expense = (props) => {
+     const [Prod,setProd] = useState(props.Prod);
+     //console.log('Expense Item evalueated by react');  
+      /* const clickHandler = () => {
+        setProd('great');
+      }; */
+
   return (
     <div className="expense">
-        <span>{product}</span>
+        <span>{Prod}</span>
         <span>{props.Price}</span>
         <span>{props.Company}</span>
+        {/* <button className="BuyButton" onClick={clickHandler}>Buy Now</button> */}
         <button className="BuyButton">Buy Now</button>
     </div>
   );
 };
 
-export default expense;
+export default Expense;

@@ -7,15 +7,14 @@ import { useState } from "react";
 function App() {
   const [data, setdata] = useState([]);
   const dataHandler = (datas) => {
-    console.log('app==>',datas)
     setdata(datas)
   };
 
   return (
     <div className="App">
-      <Newform dataHandler={dataHandler} />
+      <Newform newForm={dataHandler} />
       <Card>
-        <Expense data={data} />
+        <Expense newdata={data} />
       </Card>
     </div>
   );

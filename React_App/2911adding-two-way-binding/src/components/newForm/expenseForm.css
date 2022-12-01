@@ -1,0 +1,23 @@
+.first{
+    display: flex;
+    background-color: aqua;
+    margin: 3rem;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 2rem;
+    padding: 2rem;
+}
+.form{
+    display: flex;
+    justify-content: space-evenly;
+}
+.add-button{
+    margin-top: 1rem;
+    background-color: darkcyan;
+    padding: 0.3rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.add-button:hover{
+    background-color:rgb(52, 78, 78) ;
+}

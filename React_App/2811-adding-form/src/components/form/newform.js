@@ -3,10 +3,10 @@ import Card from "../UI/card";
 import "./newform.css";
 
 let Newform = (props) => {
-  const [enteredProduct, setEnterdProduct] = useState("xx");
-  const [enteredPrice, setEnterdPrice] = useState(5555);
+  const [enteredProduct, setEnterdProduct] = useState("");
+  const [enteredPrice, setEnterdPrice] = useState("");
   const [array, setArray] = useState([]);
-  
+
   const ChangeProductHandler = (containt) => {
     setEnterdProduct(containt.target.value);
   };
@@ -15,8 +15,20 @@ let Newform = (props) => {
     setEnterdPrice(containt.target.value);
   };
 
+  // const changeData = () => {
+  //   console.log('newForm===>',array)
+  //   props.dataHandler(array);
+  // }
+
   const submitHandler = (events) => {
-    events.preventDefault();
+    // events.preventDefault();
+    // console.log(enteredPrice,enteredProduct)
+    // setArray([
+    //   ...array,{
+    //     title: enteredProduct,
+    //     Price: enteredPrice
+    //   }
+    // ])
 
     // setArray([
     //   ...array,
@@ -26,21 +38,23 @@ let Newform = (props) => {
     //   },
     // ]);
 
-    array.push(  
-         {
-          title: enteredProduct,
-          Price: enteredPrice
-        }
-      )
+    // array.push(
+    //      {
+    //       title: enteredProduct,
+    //       Price: enteredPrice
+    //     }
+    //   )
 
-    changeData()
+    setArray(() => [
+      ...array,
+      {
+        title: enteredProduct,
+        Price: enteredPrice,
+      }
+    ]);
+
+    props.newForm(array)
   };
-
-    const changeData = () => {
-    console.log('newForm===>',array)
-    props.dataHandler(array);
-  }
-
 
   return (
     <div>
