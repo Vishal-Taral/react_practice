@@ -1,28 +1,33 @@
 import NewExpense from "./components/newExpense/newExpense";
+import { useState } from "react";
 import Expense from "./components/expenses/expense";
 import "./App.css";
 
+const DUMMY_EXPENSES = [
+  {
+    product: "TV",
+    price: 2000,
+    company: "Sony",
+  },
+  {
+    product: "freeze",
+    price: 23000,
+    company: "Samsung",
+  },
+  {
+    product: "Laptop",
+    price: 50000,
+    company: "Apple",
+  },
+];
+
 function App() {
-  const expenses = [
-    {
-      product: "TV",
-      price: 2000,
-      Company: "Sony",
-    },
-    {
-      product: "freeze",
-      price: 23000,
-      Company: "Samsung",
-    },
-    {
-      product: "Laptop",
-      price: 50000,
-      Company: "Apple",
-    },
-  ];
+  const [ expenses ,setExpenses ] = useState(DUMMY_EXPENSES);
 
   const addExpenseHandler = expense => {
-      console.log( expense );
+      setExpenses(prevExpenses => {
+        return [expense, ...prevExpenses];
+      });
   };
   return (
     <div className="App">
