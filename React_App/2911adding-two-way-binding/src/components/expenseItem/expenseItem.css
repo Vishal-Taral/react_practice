@@ -1,8 +1,12 @@
 .expense{
+    font-size: 18px;
+    font-weight: 700;
     background-color: pink;
     display: flex;
     justify-content: space-evenly;
-    margin: 3rem;
+    margin: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
     height: 40px;
     padding: 1rem;
     border: 1px solid black;

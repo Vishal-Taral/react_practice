@@ -14,8 +14,11 @@ const Expense = (props) => {
     // </div>
     <div>
       <div>
+        
         {props.item.map((expense) => (
+          
           <ExpenseItem
+             key={expense.product}  // if we dont use key Warning :- (Each child in a list should have a unique "key" prop.)
             Prod={expense.product}
             Price={expense.price}
             Company={expense.company}
@@ -32,3 +35,5 @@ const Expense = (props) => {
 };
 
 export default Expense;
+
+

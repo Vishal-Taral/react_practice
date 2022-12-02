@@ -9,16 +9,7 @@ const DUMMY_EXPENSES = [
     price: 2000,
     company: "Sony",
   },
-  {
-    product: "freeze",
-    price: 23000,
-    company: "Samsung",
-  },
-  {
-    product: "Laptop",
-    price: 50000,
-    company: "Apple",
-  },
+  //  
 ];
 
 function App() {
@@ -29,10 +20,11 @@ function App() {
         return [expense, ...prevExpenses];
       });
   };
+
   return (
     <div className="App">
       <NewExpense onAddProduct={addExpenseHandler} />
-      <div>
+      <div className="expenseList">
         <h3>Product List</h3>
         {/* <Expense
           Prod={expenses[0].product}
@@ -46,9 +38,12 @@ function App() {
         /> */}
 
         <Expense item={expenses}/>
+          
       </div>
     </div>
   );
 }
 
 export default App;  
+
+

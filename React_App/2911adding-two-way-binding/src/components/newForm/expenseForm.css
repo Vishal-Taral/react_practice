@@ -1,7 +1,9 @@
 .first{
     display: flex;
     background-color: aqua;
-    margin: 3rem;
+    margin: 2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
     flex-direction: column;
     border: 1px solid black;
     border-radius: 2rem;
@@ -12,12 +14,20 @@
     justify-content: space-evenly;
 }
 .add-button{
-    margin-top: 1rem;
+    margin-top: 2rem;
     background-color: darkcyan;
-    padding: 0.3rem;
+    padding: 1rem;
     border-radius: 8px;
     cursor: pointer;
+
 }
 .add-button:hover{
     background-color:rgb(52, 78, 78) ;
+}
+.inputs{
+    border-radius: 4px;
+    height: 110%;
+    width: 230px;
+    font-size: 18px;
+    color: blue;
 }
