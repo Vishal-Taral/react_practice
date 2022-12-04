@@ -1,11 +1,11 @@
 import './expenseFilter.css'
 
-const expenseFilter = () => {
-    return ( 
-        <div>
-
+const ExpenseFilter = () => {
+    return (
+        <div className='expense-filter'>
+            <h1>ExpenseFilter components</h1>
         </div>
-    )
+    );
 }
 
-export default expenseFilter
+export default ExpenseFilter; 
