@@ -13,10 +13,11 @@ const Expenses = (props) => {
       {props.item.map((expense) => (
           
           <ExpenseItem
-            // key={expense.expenses}  // if we dont use key Warning :- (Each child in a list should have a unique "key" prop.)
-            Prod={expense.product}
-            Price={expense.price}   
-            Company={expense.company}
+            key={expense.expenses}  // if we dont use key Warning :- (Each child in a list should have a unique "key" prop.)
+            prod={expense.product}
+            price={expense.price}   
+            company={expense.company}
+            // date = {expense.date}
           />
         ))}
       </Card>

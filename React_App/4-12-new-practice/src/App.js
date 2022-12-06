@@ -8,7 +8,7 @@ const DUMMY_EXPENSES = [
   {
     product: "Fan",
     price: 1800,
-     company: "USHA",
+    company: "USHA",
     // date : new Date(2022, 12, 24)
   }
 ];
