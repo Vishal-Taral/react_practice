@@ -1,14 +1,14 @@
 import "./expenseItem.css";
 
-const ExpenseItem = (props) => {
-    
+const ExpenseItem = (props) => {    
+
   return (
     
     <div className="expenseItem">
-      <span>{props.Prod}</span>
-      <span>{props.Price}</span>
-      <span>{props.Company}</span>
-      {/* <span>{props.Date.toDateString()}</span> */}
+      <span>{props.prod}</span>
+      <span>{props.price}</span>
+      <span>{props.company}</span>
+      <span>{props.date}</span>
     </div>
   );
 };

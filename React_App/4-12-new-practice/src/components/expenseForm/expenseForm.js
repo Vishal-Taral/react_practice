@@ -6,6 +6,8 @@ const ExpenseForm = (props) => {
   const [enteredProduct, setEnteredProduct] = useState("");
   const [enteredPrice, setEnteredPrice] = useState("");
   const [enteredCompany, setEnteredCompany] = useState("");
+  const [enteredDate, setEnteredDate] = useState(new Date());
+
 
   const productChangeHandler = (event) => {
     setEnteredProduct(event.target.value);
@@ -19,16 +21,22 @@ const ExpenseForm = (props) => {
     setEnteredCompany(event.target.value);
   };
 
+  const dateChangeHandler = (event) => {
+    setEnteredDate(event.target.value);
+  };
+
   const submitHandler = () => {
     const productData = {
       product: enteredProduct,
       price: enteredPrice,
       company: enteredCompany,
+      date: enteredDate,
     };
     props.onSaveProductData(productData);
     setEnteredProduct("");
     setEnteredPrice("");
     setEnteredCompany("");
+    setEnteredDate("");
   };
 
   return (
@@ -64,6 +72,17 @@ const ExpenseForm = (props) => {
             placeholder="enter company here "
             value={enteredCompany}
             onChange={companyChangeHandler}
+          />
+        </div>
+
+        <div className="fields ">
+          <label className="title">Expiry Date :-</label>
+          <input
+            type="date"
+            className="inputs"
+            placeholder="enter expiry here "
+            value={enteredDate}
+            onChange={dateChangeHandler}
           />
         </div>
       </div>
