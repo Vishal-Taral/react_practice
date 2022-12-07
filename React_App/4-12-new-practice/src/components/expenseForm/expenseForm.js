@@ -8,7 +8,6 @@ const ExpenseForm = (props) => {
   const [enteredCompany, setEnteredCompany] = useState("");
   const [enteredDate, setEnteredDate] = useState(new Date());
 
-
   const productChangeHandler = (event) => {
     setEnteredProduct(event.target.value);
   };
@@ -22,7 +21,8 @@ const ExpenseForm = (props) => {
   };
 
   const dateChangeHandler = (event) => {
-    setEnteredDate(event.target.value);
+    const newDate = new Date(event.target.value)
+    setEnteredDate(newDate);
   };
 
   const submitHandler = () => {

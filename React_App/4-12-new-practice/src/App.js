@@ -11,18 +11,6 @@ const DUMMY_EXPENSES = [
     company: "USHA",
     date : '2022-12-25'
   },
-  {
-    product: "TV",
-    price: 35000,
-    company: "SAMSUNG",
-    date : '2018-11-25'
-  },
-  {
-    product: "Mixer",
-    price: 2200,
-    company: "surya",
-    date : '2018-12-1'
-  },
 ];
 
 function App() {
