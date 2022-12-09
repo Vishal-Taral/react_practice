@@ -5,10 +5,12 @@ const BtnClick = (props) => {
     const [ newName, setNewName ] = useState(props.name);
     
 
-    const clickHandler = () => {
+    const clickHandler = (event) => {
         setNewName("Atharva");
         console.log(newName);
+        props.sendData(event)
     }
+    
     return(
         <div className='clickable-button'>
             <li>{newName}</li>

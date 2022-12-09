@@ -1,27 +1,16 @@
 import "./card.css";
-import { useState } from "react";
 
-const Card = () => {
-  const [input, setInput] = useState("");
-  const [input1, setinput1] = useState("hello");
-
-  const changeHandler = (e) => {
-    setInput(e.target.value);
+const Card = (props) => {
+  const emp = {
+    name: "vishal",
   };
 
-  const changeText = (t) => {
-    setinput1(t.target.value);
+  const clickHandler = (data) => {
+    props.getdata(data);
   };
-
   return (
     <div>
-      <div>
-        <input type="text" onChange={changeText} />
-        <h2>{input1}</h2>
-      </div>
-      <input type="date" onChange={changeHandler} />
-
-      <h1>{input}</h1>
+      <button onClick={() => clickHandler(emp.name)}>chuchu</button>
     </div>
   );
 };
