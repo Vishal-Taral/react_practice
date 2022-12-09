@@ -13,7 +13,7 @@ const BtnClick = (props) => {
     
     return(
         <div className='clickable-button'>
-            <li>{newName}</li>
+            <li>{newName}</li><br />
             <button onClick={clickHandler}>Click me</button>
         </div>
     );

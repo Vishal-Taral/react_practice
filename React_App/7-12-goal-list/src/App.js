@@ -9,7 +9,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div className="App">
       <BtnClick name={name} sendData = {getData} />
       <Card getdata={getData} />
     </div>
