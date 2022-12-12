@@ -1,22 +1,17 @@
 import "./expense.css";
 import ExpenseItem from "../expenseItem/expenseItem";
+import ExpenseFilter from "../expenseFilter/expenseFilter";
 // import { useState } from 'react';
 
 const Expense = (props) => {
-  //console.log('Expense Item evalueated by react');
+  
 
   return (
-    // <div className="expense">
-    //     <span>{props.Prod}</span>
-    //     <span>{props.Price}</span>
-    //     <span>{props.Company}</span>
-    //     {/* <button className="BuyButton" onClick={clickHandler}>Buy Now</button> */}
-    // </div>
+    
     <div>
       <div>
+        <ExpenseFilter />
         {props.item.map((expense) => (
-          
-
           <ExpenseItem
              key={expense.product}  // if we dont use key Warning :- (Each child in a list should have a unique "key" prop.)
             Prod={expense.product}
@@ -24,11 +19,7 @@ const Expense = (props) => {
             Company={expense.company}
           />
         ))}
-        {/* <ExpenseItem
-          Prod={props.item[0].product}
-          Price={props.item[0].price}
-          Company={props.item[0].company}
-        /> */}
+        
       </div>
     </div>
   );
