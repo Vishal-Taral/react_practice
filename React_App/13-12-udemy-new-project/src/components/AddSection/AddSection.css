@@ -1,0 +1,37 @@
+.add-section{
+    border: 1px solid black;
+    background-color: burlywood;
+    width: 300px;
+    padding: 1rem;
+    margin-left: 600px;
+    margin-top: 2rem;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.inputs{
+    width: 200px;
+    height: 20px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+.btn{
+    margin-top: 1rem;
+    background-color: rgb(188, 179, 196);
+    border-radius: 4px;
+}
+.btn:hover{
+    background-color: rgb(132, 118, 145);
+}
+.name-list{
+    margin-top: 2rem;
+}
+.list{
+    background-color: cornflowerblue;
+    margin-top: 1px;
+    width: 300px;
+    margin-left: 580px;
+    border: 1px solid black;
+    border-radius: 5px;
+    list-style-type:decimal;
+}
