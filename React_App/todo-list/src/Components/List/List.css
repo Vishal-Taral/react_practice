@@ -1,16 +1,24 @@
-.act-list{
+.act-list {
     background-color: rgb(8, 8, 8);
-    list-style-type:upper-roman;
+    list-style-type: upper-roman;
     width: 300px;
     border: 1px double white;
     border-radius: 4px;
 }
-.list-item{
+
+.list-item {
     display: flex;
     margin-top: 0.5rem;
 }
-.remove-btn{
+
+.remove-btn {
     background-color: tomato;
     padding: 0.3rem;
     border-radius: 7px;
-}   
+}
+.remove-all{
+    margin-top: 2rem;
+    background-color: rgb(194, 34, 6);
+    padding: 0.3rem;
+    border-radius: 7px;
+}
