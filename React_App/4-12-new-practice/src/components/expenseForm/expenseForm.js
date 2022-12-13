@@ -1,6 +1,6 @@
 import "./expenseForm.css";
 import React, { useState } from "react";
-import Card from "../card/card";
+// import Card from "../card/card";
 
 const ExpenseForm = (props) => {
   const [enteredProduct, setEnteredProduct] = useState("");
@@ -30,7 +30,7 @@ const ExpenseForm = (props) => {
       product: enteredProduct,
       price: enteredPrice,
       company: enteredCompany,
-      date: enteredDate,
+      date: enteredDate.toString(),
     };
     props.onSaveProductData(productData);
     setEnteredProduct("");
@@ -40,7 +40,8 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <Card className="main p-3 border-warning rounded-pill ">
+    
+    <div className="main p-5 border-warning rounded-pill ">
       <div className="form row  ">
         <div className="fields">
           <label className="title">New Product Name :-</label>
@@ -91,7 +92,8 @@ const ExpenseForm = (props) => {
           Add Product
         </button>
       </div>
-    </Card>
+    </div>
+    
   );
 };
 

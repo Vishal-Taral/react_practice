@@ -8,7 +8,7 @@ const ExpenseItem = (props) => {
       <span>{props.prod}</span>
       <span>{props.price}</span>
       <span>{props.company}</span>
-      <span>{props.date}</span>
+      <span>{props.date.toString()}</span>
     </div>
   );
 };
