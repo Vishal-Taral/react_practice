@@ -10,7 +10,7 @@ const TodoList = () => {
     setActivity(event.target.value);
   };
 
-  const addActivity = (ulist) => {
+  const addActivity = () => {
     
     var upadatedList = [...list, activity];
     setList(upadatedList);
